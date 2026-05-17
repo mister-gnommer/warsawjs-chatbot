@@ -44,6 +44,17 @@ The embed stage (future) will accept a `--override-duplicates` flag:
 This avoids wasting embedding API calls on duplicates while letting the user
 force a full re-embed when needed (e.g., after changing the embedding model).
 
-## 7. Language
+## 7. Database
+
+PostgreSQL 17 with pgvector 0.8.0, running in Docker. Schema is created on
+container start via `db/init.sql`.
+
+Connection is configured via environment variables (see `.env.example`).
+
+A `meta JSONB` column is included in the talks table for ad-hoc metadata
+(e.g. event date, meetup number, scraped-from URL). Adding extra fields there
+doesn't require migrations.
+
+## 8. Language
 
 Python for ingest scripts. Stdlib only until a dependency is actually needed.
