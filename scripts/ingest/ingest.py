@@ -4,11 +4,16 @@ import argparse
 import json
 import sys
 from pathlib import Path
+
+from stages.embed import embed
 from stages.parse import parse
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Ingest scraped talk data into the pipeline")
+    # TODO for an orchestrator this got a bit crowded...
+    parser = argparse.ArgumentParser(
+        description="Ingest scraped talk data into the pipeline"
+    )
     parser.add_argument(
         "--override-duplicates",
         action="store_true",
@@ -16,8 +21,6 @@ def main():
         help="Skip DB dedup check in embed stage and re-embed all records (default: false)",
     )
     args = parser.parse_args()
-
-    _ = args  # consumed by future embed stage
 
     script_dir = Path(__file__).parent
     input_dir = script_dir / "input"
@@ -45,6 +48,9 @@ def main():
         json.dump(records, f, indent=2, ensure_ascii=False)
 
     print(f"Parsed {len(records)} talks total → {output_path}")
+
+    inserted = embed(records, args.override_duplicates)
+    print(f"Inserted {inserted} records into database")
 
 
 if __name__ == "__main__":
