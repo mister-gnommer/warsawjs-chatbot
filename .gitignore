@@ -5,3 +5,7 @@ __pycache__/
 *.pyc
 .venv/
 *.egg-info/
+
+# Ingest pipeline — scraped input data and generated checkpoints
+scripts/ingest/input/
+scripts/ingest/output/
