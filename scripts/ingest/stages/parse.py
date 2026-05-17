@@ -1,4 +1,3 @@
-# 🤖 AI-generated
 def parse(raw_text: str) -> list[dict]:
     records = []
     lines = raw_text.split("\n")
