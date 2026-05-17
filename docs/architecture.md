@@ -31,6 +31,19 @@ Empty lines separate entries.
 
 Description preserves paragraph breaks as `\n\n`.
 
-## 6. Language
+## 6. Dedup at embed stage, not parse stage
+
+Parse stage is dumb — it reads all files in `input/` and concatenates records.
+Duplicates are neither checked nor removed at this stage.
+
+The embed stage (future) will accept a `--override-duplicates` flag:
+- **false** (default): query pgvector for existing records by `(speaker, title)`,
+  skip those already present before calling the embedding API
+- **true**: skip the DB check, embed everything
+
+This avoids wasting embedding API calls on duplicates while letting the user
+force a full re-embed when needed (e.g., after changing the embedding model).
+
+## 7. Language
 
 Python for ingest scripts. Stdlib only until a dependency is actually needed.

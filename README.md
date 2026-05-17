@@ -7,6 +7,22 @@ Talks are embedded into a PostgreSQL + pgvector database. User questions are
 matched against the embeddings to find relevant context, which is then sent to
 an LLM for a natural-language answer.
 
+## Ingest pipeline
+
+Scraped talk descriptions go into `scripts/ingest/input/` as text files.
+Run the pipeline to parse them into structured JSON:
+
+```
+python scripts/ingest/ingest.py
+```
+
+By default the future embedding stage will skip records already in the
+database. To force a full re-embed:
+
+```
+python scripts/ingest/ingest.py --override-duplicates
+```
+
 ## Status
 
 🚧 Learning project — early prototyping.
