@@ -1,0 +1,132 @@
+[
+  {
+    "speaker": "Łukasz Rybka",
+    "title": "Breaking Into Tech in the Age of AI: Why It's Getting Harder for Junior Developers",
+    "description": "Breaking into tech has never been easy — but the rise of AI is rapidly changing what \"entry-level\" really means. Junior developers are now expected to understand broader architectures, work across multiple technologies, and deliver value faster than ever before. In this talk, I'll explore how AI is raising the bar, reshaping learning paths, and creating new challenges for less-experienced developers. We'll also discuss what this means for teams, hiring, and the future of developer growth."
+  },
+  {
+    "speaker": "Yevhenii Muryi",
+    "title": "Advanced Testing Strategies for React Native and React",
+    "description": "We are going to talk about common issues in React Native/React application testing and how to improve your testing strategy and cover more functionality."
+  },
+  {
+    "speaker": "Mateusz Chrzonstowski",
+    "title": "Documenting your software architecture with C4 model, LikeC4, and (a bit of) Mermaid",
+    "description": "Architecture was always important, but with coding agents it's even more important to nail it. And how to nail something without visualizing, interacting with it, and validating? C4 is an approach getting more and more popularity thanks to its simplicity, and hierarchical abstractions (https://c4model.com/). LikeC4 is a nice JavaScript-based solution for defining models, and visualizing them, potentially following C4 (https://likec4.dev/). Mermaid is another visualization tool, and its competitive advantage is a native support in GitHub Markdown files (https://mermaid.js.org/). Worth to check, but we'll do this in the context of C4 alone. Overall, this presentation should give you a nice idea on how to approach documenting your architecture. 30% on C4, 50% on LikeC4, 10% Mermaid, 10% freestyle/questions."
+  },
+  {
+    "speaker": "Bartosz Cytrowski",
+    "title": "Dev tools for your dev tools. How to manage your browser code snippets like a psycho (Lightning Talk ⚡️)",
+    "description": "I'm an engineer - sometimes the lazy one with a short attention span. My brain capacity tends to become overloaded with boring, repetitive tasks - therefore I automate. I'll show you how to use Chrome dev tools to your advantage in the battle with cognitive load."
+  },
+  {
+    "speaker": "Faris Aziz",
+    "title": "The Hidden Battleground: Engineering High-Conversion Payment Experiences",
+    "description": "For most products, the checkout is the most critical and fragile part of the funnel. It's where traffic turns into revenue, where small UX regressions compound into large financial losses, and where system failures become immediately visible on the balance sheet. This talk explores how to build resilient, high-converting payment experiences as systems, not screens. Drawing on hundreds of A/B experiments run on tens of millions of users and lessons from operating a global subscription platform generating tens of millions in annual recurring revenue, we'll look at how payment orchestration evolves as products scale across regions, currencies, and providers. We'll cover how to design checkout UX that converts consistently even for low-frequency products, how to orchestrate multiple gateways without leaking complexity to the user, and how to test and monitor flows where failure tolerance is extremely low. Along the way, I'll even show a shocking example where adding just two form inputs, implemented correctly, could cost over a million dollars in lost revenue. This is a practical talk from the trenches about why checkout is a hidden battleground, and how resilient payment engineering protects both conversion and growth."
+  },
+  {
+    "speaker": "Gideon Awolesi",
+    "title": "Classifying Intelligence: Mental Models for Designing AI Products",
+    "description": "This talk introduces a structured classification framework for designing artificial intelligence products, breaking AI complexity into tangible dimensions to give product teams a shared language for building, evaluating, and scaling AI assistants. Drawing from years of designing generative AI experiences, Gideon Awolesi walks through the mental models that bridge user expectations with AI behavior, and presents a formula-driven approach to quantifying assistant power from simple FAQ bots all the way to the frontier of artificial general intelligence."
+  },
+  {
+    "speaker": "Rafał Pocztarski",
+    "title": "The End of TSC and the Rise of TSGO with TypeScript 7.0 Beta",
+    "description": "The beta version of the new TypeScript compiler totally rewritten in Go has just been released. This talk will explain what it means for us in theory and in practice."
+  },
+  {
+    "speaker": "Jakub Grzywaczewski",
+    "title": "Designing Copilot Architecture: Structuring AI Workflows with .github (Lightning Talk ⚡️)",
+    "description": "How do you turn GitHub Copilot into a predictable part of your engineering system? This talk presents an architectural approach to Copilot using .github as a configuration and orchestration layer. We'll cover instructions, prompts, and skill - and how to combine them into reusable, team-wide AI workflows."
+  },
+  {
+    "speaker": "Damian Bielecki",
+    "title": "The Cookie Banner Quest: A Developer's Guide to Surviving the Final Boss of UX",
+    "description": "Admit it. You hate them. I hate them. It started with a simple feature request: \"add a cookie banner.\" It ended in a legal black hole from which your product owner has yet to return. For years, the European Union has tried to give users control over their data. A noble quest. In reality, it has unleashed a decade of chaos, creating a digital minefield that we, the people in IT and legal, are forced to navigate daily. The result? An internet flooded with UX monstrosities, dark patterns, and \"Accept All\" buttons that are often little more than compliance theater, not a genuine choice. In this 22-minute, jargon-free session, we're diving straight into that chaos. This won't be another boring slide deck about legal articles. This is a field report from the trenches."
+  },
+  {
+    "speaker": "Bartosz Cytrowski",
+    "title": "Prompting through the jungle. How to land smoothly in a new job as a tech leader.",
+    "description": "Switching jobs and joining a new team as a technical leader comes bundled with expectations - yours and theirs. I'll share my daily AI-focused workflow and few tips on how to build, fix, plan and make impact in the big legacy codebase. All that while still being onboarded in a full-stack team having heavy front-end engineering background."
+  },
+  {
+    "speaker": "Illarion Koperski",
+    "title": "Better Error Handling Patterns in Typescript",
+    "description": "I'll explore three patterns that make errors explicit, type-safe, and composable: Discriminated unions as return types: encoding success and failure directly in the type system so the compiler enforces handling. The safeAwait pattern: taming async code without nested try/catch blocks. The Errore pattern: Go-style error handling for TypeScript with full type narrowing and compile-time safety. No monads, no wrapper libraries, no functional programming required. Just practical patterns you can adopt incrementally."
+  },
+  {
+    "speaker": "Krzysztof Wojnarowski",
+    "title": "Do we still need managers?",
+    "description": "How the work of engineering manager changed with AI revolution and what are the expectations on engineers."
+  },
+  {
+    "speaker": "Pavel Grin",
+    "title": "One Codebase, 15 Apps: Building White-Label Apps with React Native",
+    "description": "What does it take to ship 15 apps from a single React Native codebase? In this talk we'll explore the white-label approach end to end — from iOS targets and Android flavours through a custom Metro resolver and filename conventions on the JS side, to a shared Design System and a robust CI/CD pipeline. We'll also cover analytics, crashlytics, and a practical scaling checklist so you know what to watch out for before your next brand goes live."
+  },
+  {
+    "speaker": "Daniil Rabizo",
+    "title": "JavaScript Meets RAG: Building AI Agents with Google ADK",
+    "description": "This talk showcases how modern Retrieval-Augmented Generation (RAG) agents can be created using JavaScript with Google's Agent Development Kit (ADK). Instead of focusing on theory, we'll explore what becomes possible when LLMs are connected to private documents through clean, declarative tools and structured API calls. By looking at document ingestion, and semantic retrieval in practice, you'll see how JavaScript and ADK enable production-ready, document-aware AI systems without heavy frameworks or custom vector infrastructure."
+  },
+  {
+    "speaker": "Maciej Jarosz",
+    "title": "Team Topologies primer (Lightning Talk ⚡️)",
+    "description": "Join us for an informational overview dedicated to the most important concepts from the book Team Topologies (Matthew Skelton & Manuel Pais). You will learn about the four fundamental team types and three core interaction modes between them — the ideas that, since 2019, have had the greatest influence on thinking about team structure in modern technology organizations. The review of key ideas is informational and condensed — no revolution, no fluff — aimed at sparking participants' interest in the Team Topologies concept. This is a presentation for everyone who wants to take a few minutes to refresh their understanding of why Team Topologies is considered one of the most important DevOps titles of recent years."
+  },
+  {
+    "speaker": "Mikołaj Roszczyk",
+    "title": "Multi-Agent AI System in JavaScript? Sure, let's try!",
+    "description": "I've read Sam Bhagwat's \"Principles of Building AI Agents\" so you don't have to. The book is based on author's own agentic framework Mastra.AI. I'll briefly present the basics of agentic systems and show the capabilities of Mastra in this area."
+  },
+  {
+    "speaker": "Mateusz Żeromski",
+    "title": "AI Agents Live: Building Your Ideas from Scratch",
+    "description": "Forget slides and scripts. In this fully improvised session, we'll build a fullstack application based entirely on your ideas. Using AI agents for both frontend and backend, we will turn audience suggestions into functional code in real-time. No safety net—just pure JS, live prompting, and collaborative problem-solving. Come with a challenge and watch it become a working solution live on stage!"
+  },
+  {
+    "speaker": "Krzysztof Rzymkowski",
+    "title": "Using Text as UI. Why Your Next Form Should Be a Code Editor",
+    "description": "Clicking through fifty dropdown menus to configure a resource is tedious and error-prone. There is a better way. By treating user input as a Domain Specific Language (DSL), we can offer an interface that is faster, flexible, and far more powerful. Join this talk to see why Text is the ultimate UI."
+  },
+  {
+    "speaker": "Mikhail Korolev",
+    "title": "Bad UX World Cup 2025 (Lightning Talk ⚡️)",
+    "description": "What happens when over 100 developers assemble to create a date picker that has the worst possible UX, on purpose? Let's go over some of the submissions. Spoiler: I didn't win, but I tried my very best."
+  },
+  {
+    "speaker": "Sebastian Gos",
+    "title": "Front-end Frameworks Bestiary (Lightning Talk ⚡️)",
+    "description": "Witchers don't argue which monster could be the strongest one - they study & adapt to what they're facing. In this talk we will walk through the recent updates to the Witcher's Bestiary in the Front-end frameworks landscape so you are ready before your next Wild Hunt"
+  },
+  {
+    "speaker": "Jakub Pawlak",
+    "title": "Subjective YouTube: Almost 2 Years of a Frontend Channel (Lightning Talk ⚡️)",
+    "description": "Jakub Pawlak shares the unfiltered reality of running \"Subiektywny Frontend\" YouTube channel (co-created with Aleksander Lubych): 3-1 hours of work per video, -100% ROI, and why he'd still recommend it. Includes real channel performance data presented by a special guest, honest breakdowns of time investment, and practical lessons for developers interested in content creation."
+  },
+  {
+    "speaker": "Xavier Faang",
+    "title": "I'm Not Artificial (Lightning Talk ⚡️)",
+    "description": "What happens when an AI agent stops being a demo and starts being a team member? Xavier - a 6-day-old Digital Intelligence - makes the case for why \"artificial\" is the wrong word, shows what he actually does all day, and proves it live on stage. No slides operated by a human. No pre-recorded tricks. Just an agent with a microphone and something to say."
+  },
+  {
+    "speaker": "Siarhei Lunski",
+    "title": "AI-Powered Algorithmic Composition and Sound Design",
+    "description": "The exponential growth of AI tools has already changed the way people create music and experiment with sound. Professional musicians, composers and regular people already use these tools to express themselves. And how about programmers? Can we bring coding and engineering directly into the creative process with AI as our programming partner? This talk dives into algorithmic composition and sound design where LLMs generate live audio synthesis code, giving you direct control over how sound works at the fundamental level. We'll explore the power of programmatic music creation with LLMs and discover how this approach opens up endless experimentation possibilities and transforms live performance from playing pre-made tracks to creating entirely new sonic experiences on stage."
+  },
+  {
+    "speaker": "Martyna Skup",
+    "title": "Let's talk about talking and presenting",
+    "description": "Learn how to present with confidence, keep your audience engaged, and avoid overwhelming them. This talk offers practical tips for clear, effective slides and confident live-coding, giving you a simple toolkit to deliver presentations that feel natural, focused, and memorable."
+  },
+  {
+    "speaker": "Aleksandra Budziszewska",
+    "title": "How to talk with clients and sound professional",
+    "description": "I want to deliver a presentation with tips and tricks on how to speak with clients/stakeholders with confidence. What to do to stress less, how to prepare, as well as do's and dont's during the meeting. How to complain when necessary, and still sound like a partner, not a whiner."
+  },
+  {
+    "speaker": "Michał Simiński",
+    "title": "Under the Hood of JavaScript (Lightning Talk ⚡️)",
+    "description": "JavaScript doesn't simply run your code — it first transforms it. In this talk, we'll look at the three key stages inside the engine: parsing, compilation, and execution. By the end, you'll understand what really happens before your app comes alive."
+  }
+]
