@@ -1,3 +1,4 @@
+<!-- 🤖 AI-generated -->
 # Architecture Decision Record — WarsawJS Chatbot
 
 ## 1. Ingest and app are separate components
@@ -43,7 +44,15 @@ The embed stage (future) will accept a `--override-duplicates` flag:
 This avoids wasting embedding API calls on duplicates while letting the user
 force a full re-embed when needed (e.g., after changing the embedding model).
 
-## 7. Database
+## 7. Embedding model
+
+`sentence-transformers` with `all-MiniLM-L6-v2` (384 dims). Runs in-process as
+a Python library — no separate server, no API key.
+
+Ollama stays in `docker-compose.yml` to serve a 3B chat model for the CLI app
+(not used by the ingest pipeline).
+
+## 8. Database
 
 PostgreSQL 17 with pgvector 0.8.0, running in Docker. Schema is created on
 container start via `db/init.sql`.
@@ -54,6 +63,8 @@ A `meta JSONB` column is included in the talks table for ad-hoc metadata
 (e.g. event date, meetup number, scraped-from URL). Adding extra fields there
 doesn't require migrations.
 
-## 8. Language
+Vector dimension is 384 (matching `all-MiniLM-L6-v2`).
+
+## 9. Language
 
 Python for ingest scripts. Stdlib only until a dependency is actually needed.
