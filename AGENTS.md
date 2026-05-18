@@ -1,3 +1,4 @@
+<!-- 🤖 AI-generated -->
 # AGENTS.md — WarsawJS Chatbot
 
 This is a **learning project**. The goal is to build a CLI tool that answers
@@ -27,3 +28,5 @@ questions about WarsawJS meetup talks using embeddings + LLM.
 - Wrap AI-generated code blocks in `// 🤖 AI-start` / `// 🤖 AI-end` fences
   for non-trivial changes
 - Run tests before any commit
+- Correct my terminology on AI/ML concepts and Python idioms — I want to
+  learn the right words and patterns
