@@ -1,4 +1,3 @@
-<!-- 🤖 AI-generated -->
 # AGENTS.md — WarsawJS Chatbot
 
 This is a **learning project**. The goal is to build a CLI tool that answers

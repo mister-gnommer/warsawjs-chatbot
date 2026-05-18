@@ -1,4 +1,3 @@
-# 🤖 AI-generated
 import os
 
 from dotenv import load_dotenv
@@ -74,8 +73,7 @@ def _insert_records(
 def embed(records: list[dict], override_duplicates: bool) -> int:
     conn = _db_conn()
 
-    existing = _load_existing(conn) if not override_duplicates else set()
-    to_embed = records if override_duplicates else _filter_new(records, existing)
+    to_embed = records if override_duplicates else _filter_new(records, _load_existing(conn))
     skipped = len(records) - len(to_embed)
 
     if skipped:

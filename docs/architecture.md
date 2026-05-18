@@ -1,4 +1,3 @@
-<!-- 🤖 AI-generated -->
 # Architecture Decision Record — WarsawJS Chatbot
 
 ## 1. Ingest and app are separate components

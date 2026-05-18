@@ -1,4 +1,3 @@
--- 🤖 AI-generated
 CREATE EXTENSION IF NOT EXISTS vector;
 
 -- 384 dims matches all-MiniLM-L6-v2 from sentence-transformers
