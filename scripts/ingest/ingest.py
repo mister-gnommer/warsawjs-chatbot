@@ -2,9 +2,10 @@
 import argparse
 import json
 import sys
+from dataclasses import asdict
 from pathlib import Path
 
-from stages.embed import embed
+from stages.embed import Talk, embed
 from stages.parse import parse
 
 
@@ -21,7 +22,7 @@ def _parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def _collect_records(input_dir: Path) -> list[dict]:
+def _collect_records(input_dir: Path) -> list[Talk]:
     if not input_dir.is_dir():
         print(f"Input directory not found: {input_dir}", file=sys.stderr)
         sys.exit(1)
@@ -38,12 +39,12 @@ def _collect_records(input_dir: Path) -> list[dict]:
     return records
 
 
-def _write_checkpoint(records: list[dict], output_dir: Path) -> Path:
+def _write_checkpoint(records: list[Talk], output_dir: Path) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / "talks.json"
 
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(records, f, indent=2, ensure_ascii=False)
+        json.dump([asdict(t) for t in records], f, indent=2, ensure_ascii=False)
 
     print(f"Parsed {len(records)} talks total → {output_path}")
     return output_path

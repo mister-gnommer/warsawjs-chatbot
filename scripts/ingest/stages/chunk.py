@@ -1,4 +1,3 @@
-# 🤖 AI-generated
 import re
 
 # all-MiniLM-L6-v2 has a 256-token context window
@@ -9,6 +8,13 @@ MAX_CHUNK_CHARS = 500
 def _split_sentences(text: str) -> list[str]:
     parts = re.split(r"(?<=[.?!])\s+", text)
     return [p.strip() for p in parts if p.strip()]
+
+
+# TODO (but-not-sure)
+# each chunk is composed from sentences. If sentence is too long to be one chunk we split it by words:
+# add as many words as possible into first chunk, flush and proceed to next until all words are done
+# this may lead to one-word sentence, AI says it doesn't matter (sense is preserved in previous chunk)
+# I'm not a fan, but agree that impact is low, so I won't focus on this, but maybe needs digging a bit?
 
 
 def _accumulate_sentences(sentences: list[str]) -> list[str]:

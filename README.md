@@ -26,3 +26,9 @@ python scripts/ingest/ingest.py --override-duplicates
 ## Status
 
 🚧 Learning project — early prototyping.
+
+### Potential refactors
+
+- **`scripts/ingest/stages/embed.py`** — the file mixes SQL, embedding logic, and
+  orchestration in a single module. If it grows significantly, consider splitting
+  into infra (DB), service (embedding), and orchestration layers — not before.
