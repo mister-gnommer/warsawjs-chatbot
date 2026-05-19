@@ -1,14 +1,6 @@
 import re
 
-# all-MiniLM-L6-v2 has a 256-token context window
-# ~500 chars is a safe upper bound
-MAX_CHUNK_CHARS = 500
-
-
-def _split_sentences(text: str) -> list[str]:
-    parts = re.split(r"(?<=[.?!])\s+", text)
-    return [p.strip() for p in parts if p.strip()]
-
+from stages.config import MAX_CHUNK_CHARS
 
 # TODO (but-not-sure)
 # each chunk is composed from sentences. If sentence is too long to be one chunk we split it by words:
@@ -17,24 +9,28 @@ def _split_sentences(text: str) -> list[str]:
 # I'm not a fan, but agree that impact is low, so I won't focus on this, but maybe needs digging a bit?
 
 
-def _accumulate_sentences(sentences: list[str]) -> list[str]:
+def _split_sentences(text: str) -> list[str]:
+    parts = re.split(r"(?<=[.?!])\s+", text)
+    return [p.strip() for p in parts if p.strip()]
+
+
+def _accumulate_sentences(sentences: list[str], max_chars: int) -> list[str]:
     chunks = []
     current = ""
 
     for sentence in sentences:
         candidate = (current + " " + sentence).strip() if current else sentence
-        if len(candidate) <= MAX_CHUNK_CHARS:
+        if len(candidate) <= max_chars:
             current = candidate
         else:
             if current:
                 chunks.append(current)
-            # sentence alone exceeds MAX_CHUNK_CHARS — force split by words
-            if len(sentence) > MAX_CHUNK_CHARS:
+            if len(sentence) > max_chars:
                 words = sentence.split()
                 current = ""
                 for word in words:
                     candidate = (current + " " + word).strip() if current else word
-                    if len(candidate) <= MAX_CHUNK_CHARS:
+                    if len(candidate) <= max_chars:
                         current = candidate
                     else:
                         chunks.append(current)
@@ -48,15 +44,16 @@ def _accumulate_sentences(sentences: list[str]) -> list[str]:
     return chunks
 
 
-def chunk_text(text: str) -> list[str]:
+def chunk_text(text: str, max_chars: int | None = None) -> list[str]:
+    limit = max_chars if max_chars is not None else MAX_CHUNK_CHARS
     paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
 
     chunks = []
     for para in paragraphs:
-        if len(para) <= MAX_CHUNK_CHARS:
+        if len(para) <= limit:
             chunks.append(para)
         else:
             sentences = _split_sentences(para)
-            chunks.extend(_accumulate_sentences(sentences))
+            chunks.extend(_accumulate_sentences(sentences, limit))
 
     return chunks
