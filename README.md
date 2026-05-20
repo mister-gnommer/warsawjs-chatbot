@@ -32,3 +32,7 @@ python scripts/ingest/ingest.py --override-duplicates
 - **`scripts/ingest/stages/embed.py`** — the file mixes SQL, embedding logic, and
   orchestration in a single module. If it grows significantly, consider splitting
   into infra (DB), service (embedding), and orchestration layers — not before.
+- **`scripts/ingest/stages/parse.py`** — the `"Avatar of "` delimiter on any line
+  can false-positive if a description contains a line starting with it. Consider
+  validating that the skipped speaker-name line matches the extracted speaker to
+  distinguish real entries from false matches.
