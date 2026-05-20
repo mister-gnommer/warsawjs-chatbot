@@ -3,7 +3,7 @@ from pathlib import Path
 from stages.embed import Talk
 from stages.parse import parse
 
-INPUT_DIR = Path(__file__).resolve().parent.parent / "input"
+INPUT_DIR = Path(__file__).resolve().parent.parent.parent / "input"
 
 SINGLE_TALK_INPUT = """Avatar of John Doe
 John Doe
