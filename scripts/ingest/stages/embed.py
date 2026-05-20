@@ -3,7 +3,8 @@ from dataclasses import dataclass
 
 import psycopg
 from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
+
+from shared.embedding import embed_texts
 from stages.chunk import chunk_text
 
 SpeakerTitle = tuple[str, str]
@@ -17,15 +18,6 @@ class Talk:
 
 
 load_dotenv()
-
-_model: SentenceTransformer | None = None
-
-
-def _get_model() -> SentenceTransformer:
-    global _model
-    if _model is None:
-        _model = SentenceTransformer("all-MiniLM-L6-v2")
-    return _model
 
 
 def _db_conn() -> psycopg.Connection:
@@ -49,15 +41,6 @@ def _filter_new(
     existing: set[SpeakerTitle],
 ) -> list[Talk]:
     return [r for r in records if (r.speaker, r.title) not in existing]
-
-
-def _generate_embeddings(texts: list[str]) -> list[list[float]]:
-    if not texts:
-        return []
-
-    model = _get_model()
-    embeddings = model.encode(texts, show_progress_bar=True)
-    return embeddings.tolist()
 
 
 def _insert_talks(
@@ -142,7 +125,7 @@ def _process_chunks(
     talk_id_list, all_texts = zip(*chunk_items)
     print(f"[embed] generated {len(all_texts)} chunks from {len(records)} talks")
     print(f"[embed] generating embeddings for {len(all_texts)} chunks...")
-    embeddings = _generate_embeddings(list(all_texts))
+    embeddings = embed_texts(list(all_texts))
 
     db_items = list(zip(talk_id_list, all_texts, embeddings))
     _insert_chunks(conn, db_items)

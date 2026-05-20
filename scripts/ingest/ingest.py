@@ -5,6 +5,8 @@ import sys
 from dataclasses import asdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from stages.embed import Talk, embed
 from stages.parse import parse
 
