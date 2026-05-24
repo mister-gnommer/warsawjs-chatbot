@@ -10,10 +10,10 @@ def _get_model() -> SentenceTransformer:
     return _model
 
 
-def embed_texts(texts: list[str]) -> list[list[float]]:
+def embed_texts(texts: list[str], show_progress_bar: bool = True) -> list[list[float]]:
     if not texts:
         return []
 
     model = _get_model()
-    embeddings = model.encode(texts, show_progress_bar=True)
+    embeddings = model.encode(texts, show_progress_bar=show_progress_bar)
     return embeddings.tolist()
