@@ -2,11 +2,6 @@ import re
 
 from stages.config import MAX_CHUNK_CHARS
 
-# TODO (but-not-sure)
-# each chunk is composed from sentences. If sentence is too long to be one chunk we split it by words:
-# add as many words as possible into first chunk, flush and proceed to next until all words are done
-# this may lead to one-word sentence, AI says it doesn't matter (sense is preserved in previous chunk)
-# I'm not a fan, but agree that impact is low, so I won't focus on this, but maybe needs digging a bit?
 
 
 def _split_sentences(text: str) -> list[str]:

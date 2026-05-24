@@ -11,6 +11,7 @@ HISTORY_FILE = Path.home() / ".warsawjs-chat-history"
 def create_repl() -> PromptSession:
     bindings = KeyBindings()
 
+    # TODO: switch to Enter to submit (single-line mode); Meta+Enter for multi-line
     @bindings.add("escape", "enter")
     def _(event):
         event.current_buffer.validate_and_handle()

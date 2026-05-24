@@ -55,6 +55,7 @@ def main() -> None:
         if not text.strip():
             continue
 
+        # TODO: show progress indicators (e.g. "Embedding query...", "Searching...", "Generating answer...")
         try:
             results = search_similar(text, top_k=TOP_K, threshold=SIMILARITY_THRESHOLD)
         except Exception as exc:
