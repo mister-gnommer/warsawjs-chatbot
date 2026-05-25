@@ -116,6 +116,7 @@ def _process_chunks(
     chunk_items: list[tuple[int, str]] = []
     for record in records:
         tid = talk_ids[(record.speaker, record.title)]
+        chunk_items.append((tid, record.title))
         for c in chunk_text(record.description):
             chunk_items.append((tid, c))
 

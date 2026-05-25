@@ -77,7 +77,7 @@ def test_inserts_talks_and_chunks():
         cur.execute("SELECT COUNT(*) FROM chunks")
         row = cur.fetchone()
         assert row is not None
-        assert row[0] == 2
+        assert row[0] == 4  # 2 title chunks + 2 description chunks
     conn.close()
 
 
@@ -108,7 +108,7 @@ def test_override_duplicates_rechunks():
         assert row[0] == talk_id
         assert row[1] > short_len
 
-        cur.execute("SELECT text FROM chunks LIMIT 1")
+        cur.execute("SELECT text FROM chunks WHERE length(text) > 200 LIMIT 1")
         row = cur.fetchone()
         assert row is not None
         assert len(row[0]) > 200
