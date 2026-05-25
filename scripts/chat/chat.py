@@ -45,7 +45,7 @@ def show_sources(chunks: list[dict]) -> None:
 def main() -> None:
     session = create_repl()
     console.print("WarsawJS Chatbot \u2014 ask me about meetup talks", style="bold")
-    console.print("Meta+Enter to submit. /quit to exit.\n")
+    console.print("Enter to submit, Meta+Enter for newline. /quit to exit.\n")
 
     while True:
         text = read_input(session)
