@@ -17,6 +17,8 @@ SYSTEM_PROMPT = """You are a WarsawJS meetup assistant. Answer questions about W
 Context:
 {context}"""
 
+FALLBACK_PROMPT = "You are a WarsawJS meetup assistant. No relevant talks were found for this question. If you don't know the answer, say so honestly."
+
 console = Console()
 
 
@@ -62,14 +64,13 @@ def main() -> None:
             console.print(f"[red]Search failed: {exc}[/red]")
             continue
 
-        # TODO: add fallback — ask LLM without context instead of skipping
-        if not results:
-            console.print("[yellow]No relevant talks found.[/yellow]")
-            continue
+        if results:
+            prompt = build_prompt(build_context(results))
+        else:
+            prompt = FALLBACK_PROMPT
 
-        context = build_context(results)
         messages: list[ChatCompletionMessageParam] = [
-            {"role": "system", "content": build_prompt(context)},
+            {"role": "system", "content": prompt},
             {"role": "user", "content": text},
         ]
 
@@ -81,7 +82,8 @@ def main() -> None:
             console.print(f"\n[red]LLM request failed: {exc}[/red]")
             continue
 
-        show_sources(results)
+        if results:
+            show_sources(results)
 
 
 if __name__ == "__main__":
