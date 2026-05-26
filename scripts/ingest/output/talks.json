@@ -128,5 +128,280 @@
     "speaker": "Michał Simiński",
     "title": "Under the Hood of JavaScript (Lightning Talk ⚡️)",
     "description": "JavaScript doesn't simply run your code — it first transforms it. In this talk, we'll look at the three key stages inside the engine: parsing, compilation, and execution. By the end, you'll understand what really happens before your app comes alive."
+  },
+  {
+    "speaker": "Daniil Volosyuk",
+    "title": "AI app builder - deep dive",
+    "description": "I will speak about Monday Vibe - AI app builder. What value it brings to customers. How this product works under the hood, the most important technical concepts. Challenges and problems we had during development."
+  },
+  {
+    "speaker": "Szymon Chmal",
+    "title": "Write Once, Test Everywhere: Cross-Platform Testing for React Native",
+    "description": "Testing React Native apps has always been a trade-off between speed and realism. Jest is fast, familiar, and excellent for unit tests, but it runs in Node.js and relies on mocks for native modules. End-to-end frameworks offer realism, but at the cost of complex setup, ongoing maintenance, and slower pipelines. Enter React Native Harness, a new testing framework that lets you run Jest-style tests directly on real devices and simulators, with full access to native modules and no mocks by default."
+  },
+  {
+    "speaker": "Anton Morozov",
+    "title": "State of Package Managers",
+    "description": "In that talk, we will dive deep into npm, pnpm and bun package managers. We will see all the strengths and weaknesses of each of them. We will see possible ways to migrate, and we will dive into the code and run some metrics"
+  },
+  {
+    "speaker": "Michał Mickiewicz",
+    "title": "Lightning talk - What teaching others taught me",
+    "description": "I'll talk about what I've learned from teaching other about programming, how it affected the way I look at my own learning and how it helped me be a better developer."
+  },
+  {
+    "speaker": "Łukasz Chludziński",
+    "title": "My First Few Months with Lynx.js",
+    "description": "So you've heard of React Native, Flutter, maybe even SwiftUI — but what about Lynx.js, the new UI framework coming out of Bytedance (yep, the company behind TikTok)? Over the past few months, I've been diving into Lynx.js, building real apps with it, and learning where it shines… and where it still makes you want to scream into a pillow. In this talk, I'll share: • What Lynx.js actually is, and why Bytedance/TikTok are betting big on it • The developer experience (good, bad, and \"wait, what just happened?\") • How it handles cross-platform UI at massive scale • Lessons I learned as a newcomer — so you don't make the same mistakes Whether you're curious about the next wave of front-end frameworks, or just want to know what TikTok is running under the hood, you'll leave with a solid picture of Lynx.js and a few laughs along the way."
+  },
+  {
+    "speaker": "Maciej Papiewski",
+    "title": "Javascript demons and how to find them",
+    "description": "I will go over Javascript drawbacks and quirks with the most substantial impact, and explain where they started. These will include inherent security flaws of both the language and the ecosystem, syntax/runtime quirks that cause the most needless errors. Then I will present how entire companies started just to mitigate some of these flaws."
+  },
+  {
+    "speaker": "Tomasz Nurkiewicz",
+    "title": "The Illusion of Immortality: Temporal's Magic for Reliable Workflows",
+    "description": "If you are orchestrating microservices, use queues, webhooks, cron jobs, run periodic processes, distribute work or elect leader, call lambda functions, have background processes... you are most likely implementing a workflow in disguise. Explore the concept that nearly all non-trivial code can be viewed as a workflow. This talk introduces Temporal, an open-source workflow orchestration platform, which allows developers to write workflows as if their servers were running indefinitely. Examine Temporal's ability to facilitate workflows that span extended periods, from milliseconds to years, without compromising reliability. The presentation will highlight Temporal's built-in features for resiliency, automatic retries, and load balancing, which significantly reduce the complexity of distributed system development. I aim to demonstrate how Temporal's approach to workflow management can significantly enhance the reliability and scalability of distributed systems, while also addressing the practical considerations of its implementation. Examples and live coding in Node.js environment."
+  },
+  {
+    "speaker": "Alexander Dolgov",
+    "title": "Turning Models into Extensible Platforms with JS",
+    "description": "Transforming AI from a set of black boxes to a platform with plugins. JavaScript as a glue between models, tools and the real world. We'll build some simple plugin to solve quite real tasks."
+  },
+  {
+    "speaker": "Keanu Harrell",
+    "title": "How to Build Serious Infra Without Losing Your Sanity (feat. SST.dev)",
+    "description": "With SST, JavaScript teams can build production-ready, enterprise-grade infra on AWS without drowning in complexity. This talk gives you a clear model and real-world examples to get started confidently."
+  },
+  {
+    "speaker": "Damian Bielecki",
+    "title": "Privacy by Design: GDPR for People Who Write Code, Not Laws",
+    "description": "In today's market, privacy is more than a legal requirement — it's a competitive advantage. Apps built with GDPR principles at their core are easier to sell, more attractive in due diligence, and build lasting trust with users and investors alike. This talk will show you how understanding Article 5 of the GDPR — the foundation of all data protection rules — can guide smarter design decisions and help your product stand out in crowded markets. You'll learn how \"Privacy by Design\" isn't just about compliance, but about creating technology that's ready for growth, audits, and global opportunities from day one."
+  },
+  {
+    "speaker": "Kuba Pawłot",
+    "title": "Un-Box-ing – issues with polymorphic React components (Lightning Talk ⚡️)",
+    "description": "Have you created or used polymorphic React components? In this talk I'll share some insights from refactoring the polymorphic Box component from the Dropbox design system. I'll talk about what went wrong with the initial approach and what we ended up with."
+  },
+  {
+    "speaker": "Mikołaj Roszczyk",
+    "title": "How to create a desktop application in ElectronJS with OpenVINO",
+    "description": "First of all this talk is about OpenVINO - a toolkit that enables the user to run inference faster, more optimized. Second of all - it's about how to use it in JavaScript. The talk is built around the demo I created in ElectronJS - Hide Your Mess Behind."
+  },
+  {
+    "speaker": "Kostiantyn Tsymbal",
+    "title": "Beyond REST: Exploring the World of Modern API Protocols",
+    "description": "The API landscape is evolving. While REST is the foundation we all know, a new generation of protocols is here to build faster, more efficient, and more flexible applications. Join me on a guided tour of the modern API world! We'll briefly visit REST, then explore the speed and type-safety of RPC. Our main destination will be GraphQL, where we'll uncover its powerful query language, schema stitching with Federation, and even real-time updates with Subscriptions"
+  },
+  {
+    "speaker": "Misha Jermołajew",
+    "title": "Pain-Driven Development: The Journey to Smooth Timelines",
+    "description": "Sometimes the best performance optimizations come from your own suffering. In this talk, I'll share how months of daily use turned mild UI annoyances into must-fix problems, and how a series of bold changes transformed our Fibery Timelines into a smooth, fast experience. Expect real-world React performance lessons and practical tips."
+  },
+  {
+    "speaker": "Oskar Korczak",
+    "title": "Prompt compressor (Lightning Talk ⚡️)",
+    "description": "These days, many apps rely on calls to LLM APIs. It's an important feature, but it can also be costly. I'll show you a method to reduce your AI bills that you can implement right away!"
+  },
+  {
+    "speaker": "Sebastian Gos",
+    "title": "The Wild Hunt for Angular's Future (Lightning Talk ⚡️)",
+    "description": "The Conjunction of Spheres is not over. Angular's realm is shifting - Signals grow stronger, Zone fades into legend, and new control flow incantations rise. In this 5-minute hunt, we'll explore what's new mutations that are coming and look how every Witcher should prepare for it."
+  },
+  {
+    "speaker": "Marcin Borkowski",
+    "title": "Taming massive files in the browser: chunking, streaming & reviewing",
+    "description": "Ever watched your tab choke on a multi-gigabyte upload? In this fast-paced talk you'll discover how to: Slice massive files into resumable chunks and handle flaky networks like a pro Stream large CSVs on the fly without killing your heap Build a lightning-fast review & edit interface for millions of records Add real-time ETAs and auto-resume to delight your users Just battle-tested patterns and live demos you can adapt on day one. See you at WarsawJS!"
+  },
+  {
+    "speaker": "dr Piotr Migdał",
+    "title": "Thanks to AI, you can WASM. Yes, even in Rust!",
+    "description": "AI is reshaping frontend development. It's no longer just about simplifying tedious tasks; it's about unlocking new superpowers. With a few well-crafted prompts, you can use WebAssembly and Rust with ease—no prior experience required. Your next WASM-powered 3D data visualization, award-winning hackathon game, or interactive zen simulation is now just a few prompts away!"
+  },
+  {
+    "speaker": "Mikhail Korolev",
+    "title": "Why can't all apps be web apps?",
+    "description": "Or can they? You might be surprised how much is possible to do on the Web Platform today. Would you like to live in a world where anyone can build and publish a real-time video editor, IDE or a game, all without leaving the browser? Let's explore new (or maybe slightly forgotten?) APIs, capabilities and features of the web. Let's learn to dance around and happily live together with the limitations of the browser."
+  },
+  {
+    "speaker": "Piotr Sławiński",
+    "title": "Claude Storage: AI-Assisted Learning for Humans (Lightning Talk ⚡️)",
+    "description": "Talk explores how LLMs can supercharge the way we capture, organize, and refine knowledge. By the end, you'll see how AI can become not just your notetaker, but your research partner and learning accelerator."
+  },
+  {
+    "speaker": "Karol Waszczuk",
+    "title": "Hoisting, phantoms and doppelgängers - demystifying the spooky world of NPM node_modules and how to eradicate its darkness with PNPM",
+    "description": "Physicists say black holes are the heaviest things in the universe, but surely they've never seen a truly monstrous node_modules folder. In this talk, we'll venture into the eerie underworld of NPM node_modules, where scary forces like hoisting, phantoms, and doppelgängers can haunt your projects and keep you up at night. But don't worry - there's a way out! I'll show you how switching to package managers like PNPM can help banish these spooky beings. Plus, I'll share real-life learnings (and a few battle scars) from migrating a monorepo from NPM-like setup to PNPM - so you can make this journey without losing your sanity."
+  },
+  {
+    "speaker": "Jakub Grzywaczewski",
+    "title": "Blazor WebAssembly - a new approach to web application architecture",
+    "description": "Blazor WebAssembly is a technology that combines the power of C#, JS, and WebAssembly into a single framework for building modern web applications. By leveraging WebAssembly, Blazor introduces a new way to handle client-side logic, enabling developers to use C# directly in the browser while seamlessly integrating with JavaScript. This unique approach has implications not only for architecture and maintainability but also for application performance, especially in scenarios involving computationally intensive tasks. In this talk, we'll explore how Blazor WebAssembly works, its potential to change front-end development, and how it blends these technologies to create efficient, scalable, and maintainable applications."
+  },
+  {
+    "speaker": "Patryk Wojnarowski",
+    "title": "No Vercel? No problem!",
+    "description": "Discover how to deploy your projects on a VPS using Nix and Kubernetes. Learn to leverage NixOS for declarative setup and Kubernetes for ease of deployments, gaining full control and avoiding vendor lock-in. It's a perfect setup if you want to have a cost-effective and flexible environment. And even if you want to stick to the cloud, you should still try it at least once to deeply understand the layers of the deployment stack."
+  },
+  {
+    "speaker": "Rafał Pocztarski",
+    "title": "I am switching to Go, and so is TypeScript (Lightning Talk ⚡️)",
+    "description": "Much to everyone's surprise, it was recently revealed that the TypeScript team at Microsoft had been secretly evaluating multiple programming languages to rewrite the TypeScript compiler in. The best language for that task turned out to be Go."
+  },
+  {
+    "speaker": "Hubert Sosiński",
+    "title": "Should we cancel cloud? (Lightning Talk ⚡️)",
+    "description": "Cloud platforms promised simplicity and scalability, but have they delivered—or just locked us into complexity and rising costs? In this lightning talk, we'll question whether small projects really need the overhead of hyperscale infrastructure, and explore how a humble VPS can often do the job better, cheaper, and faster. Let's challenge the cloud status quo—and bring back developer sanity."
+  },
+  {
+    "speaker": "Paweł Kowalewski",
+    "title": "Straighty introduction (Lightning Talk ⚡️)",
+    "description": "Spending the day hunched over a keyboard is a problem most JavaScript developers know too well, and the typical posture-correcting gadgets often end up weakening the muscles they're supposed to support. This talk introduces Straighty - a lightweight macOS app built as a hobby project that uses your webcam to watch your posture and nudges you with a notification whenever you start to slouch."
+  },
+  {
+    "speaker": "Gonzalo Beviglia",
+    "title": "Releasing 20 Micro-Frontends in 1 week with Module Federation",
+    "description": "Shipping one application is hard enough. Coordinating 20 releases in a single week is a monumental challenge. In this talk, I'll take you behind the scenes of how our engineering organization pulled off this ambitious project. Whether you're looking to accelerate delivery or strengthen team collaboration, you'll walk away with actionable insights for your engineering toolkit."
+  },
+  {
+    "speaker": "Kacper Zawojski",
+    "title": "Deep dive - QR Codes",
+    "description": "Let's try to understand QR codes — how they work, how they're structured, and where to find information within them."
+  },
+  {
+    "speaker": "Tomasz Flis",
+    "title": "Angular in 2025 let's go fully full stack",
+    "description": "Recently, the Angular framework introduced integrated server-side rendering, which unblocks the possibility of working as a full-stack solution. Angular apps can now play more tightly with the BE, which can solve integration issues between the front end and the back end. This talk is about introducing how to implement and use it."
+  },
+  {
+    "speaker": "Krzysztof Moszyński",
+    "title": "Self-Knowledge: Unlocking Your Freedom and Power (Lightning Talk ⚡️)",
+    "description": "I will delve into the various aspects of the most powerful knowledge in the world. I will talk about the benefits of metacognition and the consequences of lacking it. I will also share some ways to obtain it, so you too can harvest its power and become a free man on the deepest level possible."
+  },
+  {
+    "speaker": "Tomasz Ducin",
+    "title": "Modularize your Frontend Architecture",
+    "description": "If you ask any frontend developer: \"is your codebase modular?\" I bet they'd say \"of course!\" The truth is, so many frontend codebases start to look like spaghetti and unnecessary complex all too soon. The issue is caused by lack of general knowledge of architecture fundamentals, which frontend folks don't seem to be interested in, in the first place. Let's talk how we can challenge the rest you think about modularity in your codebases."
+  },
+  {
+    "speaker": "Daniil Rabizo",
+    "title": "Turning Your Angular App into a Mobile Money Maker",
+    "description": "Discover how to turn your Angular web app into a revenue-generating mobile app. This session will guide you through the process of transforming your web application into a mobile experience optimized for both the App Store and Google Play. Learn about frameworks, best practices, and monetization strategies to maximize your app's success."
+  },
+  {
+    "speaker": "Mariusz Kaczkowski",
+    "title": "Handing over code ownership to AI: Rebuilding Webapps with Vibe Coding",
+    "description": "AI tools are reshaping the front-end ecosystem, allowing developers to transition from writing code to orchestrating AI. Let's take a glimpse into the next era of web app development by exploring a real example of application rebuilt with AI."
+  },
+  {
+    "speaker": "Krzysiek Chojnacki",
+    "title": "How I scrumed my company (Lightning Talk ⚡️)",
+    "description": "I'd like to share my experience as a Product Owner in an agile-driven project to develop an ERP system for my company. Over a challenging nine months, the project led to a court case and a loss of hundreds of thousands of PLN. As I wasn't a programmer at the time, I'll provide a 'normal' customer perspective on what went wrong and how to avoid similar failures."
+  },
+  {
+    "speaker": "Piotr Sławiński",
+    "title": "SOS I Built a Morse Code Translator (Help!) (Lightning Talk ⚡️)",
+    "description": ""
+  },
+  {
+    "speaker": "Michał Warda",
+    "title": "qSpeak - your next level assistant (Lightning Talk ⚡️)",
+    "description": ""
+  },
+  {
+    "speaker": "Aleksandra Czetwertyńska",
+    "title": "Tech is not enough: how soft skills became 'power skills'?",
+    "description": "While technical skills are crucial, they are no longer enough to thrive in today's workplace. Soft skills—such as communication, adaptability, and emotional intelligence—have become \"power skills\" that drive leadership, teamwork, and innovation. How to develop them? We will explain using the best practices at 42 Warsaw."
+  },
+  {
+    "speaker": "Gil Fink",
+    "title": "Mastering Task Management in JavaScript",
+    "description": "In modern web development, efficient task management is crucial for ensuring smooth user experiences. Long-running JavaScript tasks can block the main thread, leading to janky, unresponsive interfaces. This session will explore the importance of managing tasks and how to allow the browser to prioritize user interactions. We'll discuss how to defer non-urgent tasks, improve responsiveness, and optimize performance by leveraging the browser's built-in scheduling capabilities. Join us to learn how to elevate your JavaScript performance game and create more responsive web applications."
+  },
+  {
+    "speaker": "Bartek Legięć",
+    "title": "Taming LLMs — How to make computers speak 01010001 again?",
+    "description": "LLMs are great at understanding and replying in natural language. But... it's not something that we always need. Sometimes we do require a rigid structure of data to be able to properly use it. In this talk I will show you how to make LLMs behave as we need them to!"
+  },
+  {
+    "speaker": "Mikhail Korolev",
+    "title": "Scaling your April Fools joke to 5 (Lightning Talk ⚡️)",
+    "description": ""
+  },
+  {
+    "speaker": "Siarhei Lunski",
+    "title": "The Red Pill of the Web Application performance",
+    "description": "You know something's wrong. You feel like web apps shouldn't be this slow in 2025. You think you don't have a choice – but you do. Take the Red Pill and journey into a world where browser DevTools reveal hidden truths and ECMA specs whisper optimization secrets. Together we'll see through surface-level illusions and understand what's really happening when your JavaScript runs. And don't worry about Agent Smith – AI is on our side this time."
+  },
+  {
+    "speaker": "Illarion Koperski",
+    "title": "Hands-On with Advanced TypeScript Types",
+    "description": "How to actively apply advanced TypeScript features in practical, tangible ways:\n- Strictly mapped types as blueprints for the business logic\n- Efficient and concise exhaustiveness checks, including expressions\n- Setting up the project for success with the right tooling and type defaults"
+  },
+  {
+    "speaker": "Michał Warda",
+    "title": "How to use AI to not get banned on reddit.",
+    "description": "Join me to hear about my journey from a removed reddit post and almost getting banned to a viral hit with 800,000 views and tens of thousands of new users in a matter of 2 days. I'll uncover the magic of AI and pure Data Science integrated into our Remix application and crafted with TypeScript, to gather and transform data in a super efficient way. Whether you're a tech whiz or just AI-curious, you'll get practical tips on using AI to make your application better for the end user."
+  },
+  {
+    "speaker": "Marcin Kraszewski",
+    "title": "Math Cyclone - Making Math Addicting (Lightning Talk ⚡️)",
+    "description": ""
+  },
+  {
+    "speaker": "Mikhail Korolev",
+    "title": "Talk Title (something about AI stuff) (Lightning Talk ⚡️)",
+    "description": ""
+  },
+  {
+    "speaker": "Andrzej Blikle",
+    "title": "Lingua, an invitation to a project",
+    "description": "Professor Andrzej Blikle invites us to support with his free access project Lingua - he wrote a book about the link to the book is under the github icon on the right!"
+  },
+  {
+    "speaker": "Zuza Kwiatkowska",
+    "title": "The Solution to the Deepfake Problem Might Already Exist",
+    "description": "Deepfake technology, which can be used to create fake digital media, has become a major issue that is deeply concerning us all. The tools created by scientists give people the power to undermine someone's reputation or make false accusations with just a few clicks. But is the problem really with the technology itself and the scientists who developed it? Or should we be looking more at ourselves, the users of these digital illusions? Interestingly, the solution to the deepfake problem may already be out there. However, accepting and implementing this solution could be an uncomfortable and difficult challenge for us as a society."
+  },
+  {
+    "speaker": "Jakub Pawlak",
+    "title": "Don't Do Monorepo",
+    "description": "Monorepos — big tech giants like Google and Facebook are using them. But should you? In this talk, I'll challenge the hype around monorepos and share insights from my experience working with Nx. I've seen firsthand how the promise of simplicity can lead to unexpected complexities. Along the way, I'll reveal three critical pitfalls that often go unnoticed until it's too late. These are issues you won't find in the docs—and they can derail your team's productivity if you're not prepared. But don't worry, I'll also provide a few crucial hints to help you navigate these hidden dangers."
+  },
+  {
+    "speaker": "Sebastian Gos",
+    "title": "WTF is Hydration? (Lightning Talk ⚡️)",
+    "description": "Hydration becomes a very popular term in world of Frontend development and you may be wondering what that is and if you are not falling behind. I'll try to give you short intro and provide clear picture if you should consider it to your next project."
+  },
+  {
+    "speaker": "Krzysztof Moszyński",
+    "title": "Building Wisdom — How to Debug Your Mind (Lightning Talk ⚡️)",
+    "description": "I will talk about the mechanism of feedback+change, and how one can utilize it in their own lives to gradually build wisdom and better mental models. I will talk about the three common obstacles on the path to wisdom. Finally, I will give participants a practical tool to discern and reprogram their own patterns of thinking and action."
+  },
+  {
+    "speaker": "Michał Michalczuk",
+    "title": "From Senior Developer to Manager and Back: The Journey of Returning to Coding",
+    "description": "You're working as a developer, and one day - BAM, you're offered the chance to lead a team, to step into a managerial or leadership position.\nWhat now? If I accept the offer, will I forget how to code? Will my skills depreciate? Is there a way back to a specialist path? Can I really be a \"manager by day, developer by night\"? Will I still be a technical person?\nI've been at this point! At Atlassian, I undertook an experiment and moved from a senior developer position to a manager role for 15 months... and then I went back to coding.\nWill my experience help you make a decision if you're facing one - I don't know. But it will be food for thought :slightly_smiling_face:"
+  },
+  {
+    "speaker": "Rafał Pocztarski",
+    "title": "Advanced TypeScript techniques to increase your bills and frustrate users",
+    "description": "How to increase your server bills and ruin user experience in few easy steps using widely used techniques and programming styles that are common both on the frontend and on the backend."
+  },
+  {
+    "speaker": "Mikhail Korolev",
+    "title": "Frontend Tooling of the Past, Today and Tomorrow",
+    "description": "Remember when HTML and CSS were enough? Those days are gone.\nWhile the Web Platform dates back many years what lies ahead is a journey we're yet to experience. In this talk, we'll briefly revisit Web 1.0, explore Web 2.0, and trace the evolution of JavaScript tooling.\nLearn about everything there is to know about modern front-end build systems. How is Vite different from Rspack? Can the Biome promise be finally fulfilled? Can you save hours of build time and developer sanity in 20 minutes?\nWe'll also explore the building blocks of the future Web: new tools, browsers, frameworks, and protocols. Looking at 5, 10 and even 20 years ahead, we will examine trends together and predict what the future of the web looks like."
+  },
+  {
+    "speaker": "Anastasiia Nortsova",
+    "title": "My Biggest Mistakes During the Job Search Journey (Lightning Talk ⚡️)",
+    "description": "During my job search this year, I realized how many things I did wrong. So, I want to share this experience with others to help them find the best offer."
+  },
+  {
+    "speaker": "Artur Zochniak",
+    "title": "Skip guilty pleasure now - our brain rewards us only when we struggle (voluntarily) (Lightning Talk ⚡️)",
+    "description": ""
   }
 ]
