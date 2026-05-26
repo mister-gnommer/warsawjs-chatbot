@@ -57,9 +57,9 @@ def main() -> None:
         if not text.strip():
             continue
 
-        # TODO: show progress indicators (e.g. "Embedding query...", "Searching...", "Generating answer...")
         try:
-            results = search_similar(text, top_k=TOP_K, threshold=SIMILARITY_THRESHOLD)
+            with console.status("[dim]Searching...[/dim]"):
+                results = search_similar(text, top_k=TOP_K, threshold=SIMILARITY_THRESHOLD)
         except Exception as exc:
             console.print(f"[red]Search failed: {exc}[/red]")
             continue
@@ -75,7 +75,11 @@ def main() -> None:
         ]
 
         try:
-            for token in ask_llm(messages):
+            token_iter = ask_llm(messages)
+            with console.status("[dim]Generating answer...[/dim]"):
+                first_token = next(token_iter)
+            print(first_token, end="", flush=True)
+            for token in token_iter:
                 print(token, end="", flush=True)
             print()
         except Exception as exc:
